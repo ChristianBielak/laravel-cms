@@ -15,6 +15,7 @@ class CreateColumnsTable extends Migration {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('row_id');
             $table->foreign('row_id')->references('id')->on('rows')->onDelete('cascade');
+            $table->unsignedBigInteger('element_id');
             $table->foreign('element_id')->references('id')->on('elements')->onDelete('cascade');
             $table->unsignedInteger('sorting')->default(0);
             $table->unsignedInteger('column_size')->default(12);

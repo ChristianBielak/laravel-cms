@@ -16,7 +16,7 @@ class CreatePagesTable extends Migration {
             $table->string('name');
             $table->timestamps();
             $table->unsignedBigInteger('page_id')->nullable();
-            $table->foreign('page_id')->references('id')->on(pages)->onDelete('set null');
+            $table->foreign('page_id')->references('id')->on('pages')->onDelete('set null');
         });
     }
 
