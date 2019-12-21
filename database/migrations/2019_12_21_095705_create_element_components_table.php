@@ -15,6 +15,8 @@ class CreateElementComponentsTable extends Migration
     {
         Schema::create('element_components', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('component');
             $table->timestamps();
         });
     }
